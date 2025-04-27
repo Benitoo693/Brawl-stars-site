@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Suivi Brawl Stars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 8px;
+            border: none;
+        }
+        button {
+            background-color: #00bcd4;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0097a7;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mon Suivi Brawl Stars</h1>
+    <form id="brawlForm">
+        <input type="text" id="pseudo" placeholder="Entre ton pseudo">
+        <button type="submit">Afficher la progression</button>
+    </form>
+
+    <div id="resultat" style="margin-top: 30px;"></div>
+
+    <script>
+        document.getElementById('brawlForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var pseudo = document.getElementById('pseudo').value;
+            document.getElementById('resultat').innerHTML = 
+                "<h2>Progression de " + pseudo + "</h2>" +
+                "<p>Nombre de trophées : 12345</p>" +
+                "<p>Niveau du joueur : 100</p>" +
+                "<p>Nombre de brawlers débloqués : 65</p>";
+        });
+    </script>
+</body>
+</html>
